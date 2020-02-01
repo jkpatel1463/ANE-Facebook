@@ -15,9 +15,6 @@
 package com.freshplanet.ane.AirFacebook {
 
     import com.freshplanet.ane.AirFacebook.appevents.FBEvent;
-    import com.freshplanet.ane.AirFacebook.share.FBAppInviteContent;
-    import com.freshplanet.ane.AirFacebook.share.FBGameRequestContent;
-    import com.freshplanet.ane.AirFacebook.share.FBShareLinkContent;
 
     import flash.desktop.InvokeEventReason;
 
@@ -121,7 +118,7 @@ package com.freshplanet.ane.AirFacebook {
          * @see com.freshplanet.ane.AirFacebook.FBShareDialogModeIOS
          * @see com.freshplanet.ane.AirFacebook.FBShareDialogModeAndroid
          */
-        public function setDefaultShareDialogMode(shareDialogModeIOS:FBShareDialogModeIOS = null,
+        /*public function setDefaultShareDialogMode(shareDialogModeIOS:FBShareDialogModeIOS = null,
                                                   shareDialogModeAndroid:FBShareDialogModeAndroid = null):void {
 
             if (_isInitialized()) {
@@ -131,7 +128,7 @@ package com.freshplanet.ane.AirFacebook {
                 else if (_isAndroid() && shareDialogModeAndroid)
                     _context.call("setDefaultShareDialogMode", shareDialogModeAndroid.value);
             }
-        }
+        }*/
 
         /**
          * Sets default login behavior.
@@ -314,12 +311,12 @@ package com.freshplanet.ane.AirFacebook {
          *
          * @see #setDefaultShareDialogMode
          */
-        public function shareLinkDialog(shareLinkContent:FBShareLinkContent,
+        /*public function shareLinkDialog(shareLinkContent:FBShareLinkContent,
                                         callback:Function = null):void {
 
             if (_isInitialized() && shareLinkContent != null)
                 _context.call("shareLinkDialog", shareLinkContent, _getNewCallbackName(callback));
-        }
+        }*/
         
 
         /**
@@ -328,13 +325,13 @@ package com.freshplanet.ane.AirFacebook {
          * @param frictionless
          * @param callback
          */
-        public function gameRequestDialog(gameRequestContent:FBGameRequestContent,
+        /*public function gameRequestDialog(gameRequestContent:FBGameRequestContent,
                                           frictionless:Boolean,
                                           callback:Function):void {
 
             if (_isInitialized() && gameRequestContent != null)
                 _context.call("gameRequestDialog", gameRequestContent, frictionless, _getNewCallbackName(callback));
-        }
+        }*/
 
         /**
          *
