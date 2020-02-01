@@ -110,11 +110,6 @@ public class AirFacebookExtensionContext extends FREContext {
 
 		// Sharing dialogs
 		functions.put("canPresentShareDialog", new CanPresentShareDialogFunction());
-		functions.put("shareLinkDialog", new ShareLinkDialogFunction());
-
-		// request dialog
-		functions.put("gameRequestDialog", new GameRequestDialogFunction());
-
 		//functions.put("openDeferredAppLink", new OpenDeferredAppLinkFunction());
 
 		// Settings
