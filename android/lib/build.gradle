@@ -36,11 +36,11 @@ android {
 
     useLibrary  'org.apache.http.legacy'
 
-    compileSdkVersion 27
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 29
     }
 }
 
