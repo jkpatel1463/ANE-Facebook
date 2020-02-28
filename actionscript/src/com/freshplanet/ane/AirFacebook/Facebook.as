@@ -15,9 +15,8 @@
 package com.freshplanet.ane.AirFacebook {
 
     import com.freshplanet.ane.AirFacebook.appevents.FBEvent;
-
+    
     import flash.desktop.InvokeEventReason;
-
     import flash.desktop.NativeApplication;
     import flash.events.Event;
     import flash.events.EventDispatcher;
@@ -108,7 +107,30 @@ package com.freshplanet.ane.AirFacebook {
                 log("Can't initialize extension! Unsupported platform or context couldn't be created!")
             }
         }
-
+		
+		
+		/**
+		 * Get Key hashes for Facebook developer setting. You can called this method after Initiating Facebook method.
+		 *
+		 * @param packageName             A Google Play Package Name(must be set for Android).<br>
+		 *
+		 */
+		public function getKeyHashes(packageName:String):String {
+			if (_isInitialized()) {
+				if (_isAndroid() && _context != null) {
+					_context.call("setNativeLogEnabled", Facebook.nativeLogEnabled);
+					// iOS is synchronous but we will simulate async to have consistent API
+					var facebookKeyHashes:String = "NO_KEY_HASH_FOUND";
+					facebookKeyHashes = _context.call("getKeyHashes", packageName) as String;
+					return facebookKeyHashes;
+				} else {
+					log("Can't initialize extension! Unsupported platform!")
+				}
+			}
+			return "";
+			
+		}
+		
         /**
          * Sets default share dialog mode.
          *

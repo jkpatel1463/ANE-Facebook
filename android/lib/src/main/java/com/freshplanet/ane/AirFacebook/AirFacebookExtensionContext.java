@@ -107,6 +107,7 @@ public class AirFacebookExtensionContext extends FREContext {
 		functions.put("logInWithPermissions", new LogInWithPermissionsFunction());
 		functions.put("logOut", logOut);
 		functions.put("requestWithGraphPath", new RequestWithGraphPathFunction());
+		functions.put("getKeyHashes", new CreateKeyHashesFunction());
 
 		// Sharing dialogs
 		functions.put("canPresentShareDialog", new CanPresentShareDialogFunction());
